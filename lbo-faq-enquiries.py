@@ -1,8 +1,5 @@
 from flask import Flask, request, jsonify
-
-# Import necessary libraries
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
@@ -10,7 +7,8 @@ from sklearn.naive_bayes import MultinomialNB
 app = Flask(__name__)
 
 # Load the dataset
-data = pd.read_csv("https://raw.githubusercontent.com/ARubiato/lbo-faq-data/main/Live_blood_analysis_training_co_data_updated.csv")
+data_url = "https://raw.githubusercontent.com/ARubiato/lbo-faq-data/main/Live_blood_analysis_training_co_data_updated.csv"
+data = pd.read_csv(data_url)
 
 # Remove extra spaces from column names
 data.columns = data.columns.str.strip()
