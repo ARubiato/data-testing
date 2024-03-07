@@ -5,3 +5,8 @@ services:
     startCommand: gunicorn -b 0.0.0.0:$PORT lbo-faq-enquiries:app
     buildCommand: pip install Flask scikit-learn
     buildCommand: pip install --upgrade Werkzeug
+
+curl -X POST "https://api.render.com/deploy/srv-cnjkjfun7f5s73f9vagg?key=l1M5MoO3j1k"
+
+  
+
